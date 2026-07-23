@@ -38,7 +38,7 @@ agentic-ai-lab/
 │  └─ 4_aitrust_integrated_knowledge_agent.ipynb
 ├─ data/                             # 실습용 원본 데이터
 │  ├─ sample_inputs.jsonl
-│  ├─ sample_report.txt / sample_report5.docx
+│  ├─ sample_report.txt / sample_report5.docx / 사내리모트워크_2026.docx
 │  └─ 인공지능 발전과 신뢰 기반 조성 등에 관한 기본법 (doc/hwpx/pdf)
 └─ outputs/                          # 실행 결과 (실습 시 자동 생성)
    ├─ logs/
@@ -114,8 +114,8 @@ Memory/Human-in-the-Loop, 통합 Agent까지 순서대로 다루는 기본 커�
 - `track1_core/solution/`: 01-1 ~ 05 강사용 정답 Notebook
 - `track1_core/worksheet/`: 01-1 ~ 05 학생용 TODO Notebook (빈칸을 채우며 학습)
 - `track1_core/06_my_agentic_ai_worksheet.ipynb`: 정답이 없는 자유 설계 캡스톤. 별도 설계
-  문서(`Part4_설계_워크시트.docx`, `textbook/` 자료 참고)에서 요구사항과 아키텍처를 먼저
-  정한 뒤, State → Memory → RAG(선택) → Node → Routing → Graph → 시나리오 테스트 순서로
+  문서(`Part4_설계_워크시트.docx`)에서 요구사항과 아키텍처를 먼저 정한 뒤,
+  State → Memory → RAG(선택) → Node → Routing → Graph → 시나리오 테스트 순서로
   TODO를 채운다.
 
 ### Track 2 — `track2_practical1/` (실전 응용: 사내 보고서)
@@ -130,13 +130,6 @@ Track 1의 03-1 ~ 05 개념(Chunking → Retrieval → Agentic RAG → 통합 Ag
 같은 4단계 파이프라인을 `data/인공지능 발전과 신뢰 기반 조성 등에 관한 기본법`
 HWPX 법령 문서에 적용합니다. 조·항·호·목 번호 체계를 인식해야 하는 법령 문서
 특유의 Chunking·검색 이슈(번호 충돌, 짧은 조문의 문맥 손실 등)를 다룹니다.
-
-### `textbook/` (강사용 교재 제작 자료)
-
-`python-docx` 기반으로 Notebook 내용을 Word 교재(챕터별 `build_doc_ch*.py`)와
-Mermaid 다이어그램(`make_diagrams_*.py`)으로 변환하는 스크립트 모음입니다.
-`_template/`에는 문서 서식 템플릿이, `_to_delete/`에는 정리 대상 초안이 들어
-있습니다. Notebook 실습 자체를 실행하는 데는 필요하지 않습니다.
 
 ## Notebook 실행 방법
 
@@ -170,8 +163,8 @@ Mermaid 다이어그램(`make_diagrams_*.py`)으로 변환하는 스크립트 �
 ## 데이터와 출력
 
 - `data/`: `sample_inputs.jsonl`, `sample_report.txt`, `sample_report5.docx`(Track 2용
-  사내 보고서), 그리고 Track 3용 `인공지능 발전과 신뢰 기반 조성 등에 관한 기본법`
-  원문(doc/hwpx/pdf)이 들어 있습니다.
+  사내 보고서, 원본은 `사내리모트워크_2026.docx`와 동일 내용), 그리고 Track 3용
+  `인공지능 발전과 신뢰 기반 조성 등에 관한 기본법` 원문(doc/hwpx/pdf)이 들어 있습니다.
 - `outputs/`: Notebook 실행 시 자동 생성되는 로그(`logs/`), 검색 결과(`retrieval/`),
   Chroma 벡터스토어(`vectorstore/chroma/`), HITL 체크포인트(`checkpoints/`), 평가
   결과(`evaluation/`)를 담습니다.
