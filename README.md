@@ -23,19 +23,7 @@ agentic-ai-lab/
 │  └─ notebook_utils.py
 ├─ track1_core/                      # Track 1: 핵심 개념 (01-1 ~ 06)
 │  ├─ 01-1_ai_app_workflow_agent.ipynb ... 05-1_integrated_knowledge_agent.ipynb
-│  ├─ 06_my_agentic_ai_worksheet.ipynb   # 자유 설계 캡스톤 워크시트
-│  ├─ solution/                      # 강사용 정답 Notebook (01-1 ~ 05)
-│  └─ worksheet/                     # 학생용 TODO Notebook (01-1 ~ 05)
-├─ track2_practical1/                # Track 2: 실전 응용 1 — 사내 보고서(work) 문서
-│  ├─ 1_work_document_chunking.ipynb
-│  ├─ 2_work_embedding_vector_retrieval.ipynb
-│  ├─ 3_work_agentic_rag_basic.ipynb
-│  └─ 4_work_integrated_knowledge_agent.ipynb
-├─ track3_practical2/                # Track 3: 실전 응용 2 — 법령(HWPX) 문서
-│  ├─ 1_aitrust_document_chunking.ipynb
-│  ├─ 2_aitrust_embedding_vector_retrieval.ipynb
-│  ├─ 3_aitrust_agentic_rag_basic.ipynb
-│  └─ 4_aitrust_integrated_knowledge_agent.ipynb
+│  └─ 06_my_agentic_ai_worksheet.ipynb   # 자유 설계 캡스톤 워크시트
 ├─ data/                             # 실습용 원본 데이터
 │  ├─ sample_inputs.jsonl
 │  ├─ sample_report.txt / sample_report5.docx / 사내리모트워크_2026.docx
@@ -44,8 +32,7 @@ agentic-ai-lab/
    ├─ logs/
    ├─ retrieval/
    ├─ vectorstore/chroma/
-   ├─ checkpoints/
-   └─ evaluation/
+   └─ checkpoints/
 ```
 
 ## 환경 설정
@@ -114,22 +101,6 @@ Memory/Human-in-the-Loop, 통합 Agent까지 순서대로 다루는 기본 커�
 - `track1_core/solution/`: 01-1 ~ 05 강사용 정답 Notebook
 - `track1_core/worksheet/`: 01-1 ~ 05 학생용 TODO Notebook (빈칸을 채우며 학습)
 - `track1_core/06_my_agentic_ai_worksheet.ipynb`: 정답이 없는 자유 설계 캡스톤. 별도 설계
-  문서(`Part4_설계_워크시트.docx`)에서 요구사항과 아키텍처를 먼저 정한 뒤,
-  State → Memory → RAG(선택) → Node → Routing → Graph → 시나리오 테스트 순서로
-  TODO를 채운다.
-
-### Track 2 — `track2_practical1/` (실전 응용: 사내 보고서)
-
-Track 1의 03-1 ~ 05 개념(Chunking → Retrieval → Agentic RAG → 통합 Agent)을
-`data/sample_report5.docx`(사내 리모트워크 운영 보고서) 같은 실제 업무 문서에
-적용하는 실습입니다. 모든 코드가 완성되어 있어 직접 실행하며 결과를 관찰하는
-데 초점을 둡니다.
-
-### Track 3 — `track3_practical2/` (실전 응용: 법령 문서)
-
-같은 4단계 파이프라인을 `data/인공지능 발전과 신뢰 기반 조성 등에 관한 기본법`
-HWPX 법령 문서에 적용합니다. 조·항·호·목 번호 체계를 인식해야 하는 법령 문서
-특유의 Chunking·검색 이슈(번호 충돌, 짧은 조문의 문맥 손실 등)를 다룹니다.
 
 ## Notebook 실행 방법
 

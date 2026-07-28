@@ -23,7 +23,7 @@ _ALLOWED_UNARY_OPS = {
 }
 
 
-def _eval_node(node: ast.AST) -> float:
+def _eval_node(node: ast.AST) -> int | float:
     if isinstance(node, ast.Constant) and isinstance(node.value, (int, float)):
         return node.value
     if isinstance(node, ast.BinOp) and type(node.op) in _ALLOWED_BIN_OPS:
@@ -35,10 +35,10 @@ def _eval_node(node: ast.AST) -> float:
     raise ValueError("허용되지 않은 수식 요소가 포함되어 있습니다.")
 
 
-def calculate(expression: str) -> float:
+def calculate(expression: str) -> int | float:
     """사칙연산 수식 문자열을 계산하여 숫자를 반환한다.
 
-    예: calculate("25 + 17") -> 42.0
+    예: calculate("25 + 17") -> 42
     """
     try:
         tree = ast.parse(expression, mode="eval")
