@@ -1,3 +1,8 @@
+track1_core/solution/
+track1_core/solution_v2/
+track1_core/worksheet/
+track2_practical1/
+track3_practical2/
 .agents/
 .codex/
 .tmp/
@@ -11,11 +16,7 @@ build/
 dist/
 wheels/
 *.egg-info
-track1_core/solution/
-track1_core/solution_v2/
-track1_core/worksheet/
-track2_practical1/
-track3_practical2/
+
 .env
 
 # Virtual environments
