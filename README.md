@@ -131,15 +131,12 @@ Memory/Human-in-the-Loop, 통합 Agent까지 순서대로 다루는 기본 커�
 
 ## 데이터와 출력
 
-- `data/`: `sample_inputs.jsonl`, `sample_report.txt`, `sample_report5.docx`(Track 2용
-  사내 보고서, 원본은 `사내리모트워크_2026.docx`와 동일 내용), 그리고 Track 3용
-  `인공지능 발전과 신뢰 기반 조성 등에 관한 기본법` 원문(doc/hwpx/pdf)이 들어 있습니다.
+- `data/`: `sample_inputs.jsonl`, `sample_report.txt`
 - `outputs/`: Notebook 실행 시 자동 생성되는 로그(`logs/`), 검색 결과(`retrieval/`),
-  Chroma 벡터스토어(`vectorstore/chroma/`), HITL 체크포인트(`checkpoints/`), 평가
-  결과(`evaluation/`)를 담습니다.
+  Chroma 벡터스토어(`vectorstore/chroma/`), HITL 체크포인트(`checkpoints/`)를 담습니다.
 
 ## 참고
 
 - `main.py`는 uv 프로젝트 스캐폴딩이 만든 자리표시자 스크립트로, 실습 흐름과는 무관합니다.
 - `requirements.txt`는 참고용이며, 실제 의존성 관리는 `pyproject.toml` + `uv.lock`(uv)이 기준입니다.
-# agentic_ai_lab_202607
+
