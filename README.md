@@ -98,8 +98,6 @@ Memory/Human-in-the-Loop, 통합 Agent까지 순서대로 다루는 기본 커�
 | 06 | 나만의 Agentic AI 설계·구현 워크시트 | 지금까지 배운 State/Memory/RAG/HITL을 자유 주제로 통합 설계·구현하는 캡스톤 실습 |
 
 - `track1_core/*.ipynb`(01-1 ~ 05-1): 완성된 예제/설명이 포함된 강의용 버전
-- `track1_core/solution/`: 01-1 ~ 05 강사용 정답 Notebook
-- `track1_core/worksheet/`: 01-1 ~ 05 학생용 TODO Notebook (빈칸을 채우며 학습)
 - `track1_core/06_my_agentic_ai_worksheet.ipynb`: 정답이 없는 자유 설계 캡스톤. 별도 설계
 
 ## Notebook 실행 방법
