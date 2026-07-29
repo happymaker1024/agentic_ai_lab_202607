@@ -8,7 +8,7 @@
       "요청",
       "질문"
     ],
-    "confidence": 0.9
+    "confidence": 0.95
   },
   "observation_rows": [
     {
@@ -29,7 +29,7 @@
       "id": "Q-003",
       "expected_type": "question",
       "actual_type": "question",
-      "confidence": 0.95,
+      "confidence": 0.9,
       "valid": true
     },
     {
@@ -37,6 +37,41 @@
       "expected_type": "document",
       "actual_type": "document",
       "confidence": 0.95,
+      "valid": true
+    },
+    {
+      "id": "D-002",
+      "expected_type": "document",
+      "actual_type": "question",
+      "confidence": 0.95,
+      "valid": true
+    },
+    {
+      "id": "C-001",
+      "expected_type": "calculation",
+      "actual_type": "calculation",
+      "confidence": 1.0,
+      "valid": true
+    },
+    {
+      "id": "C-002",
+      "expected_type": "calculation",
+      "actual_type": "question",
+      "confidence": 0.95,
+      "valid": true
+    },
+    {
+      "id": "U-001",
+      "expected_type": "unknown",
+      "actual_type": "question",
+      "confidence": 0.95,
+      "valid": true
+    },
+    {
+      "id": "U-002",
+      "expected_type": "unknown",
+      "actual_type": "question",
+      "confidence": 0.9,
       "valid": true
     }
   ],
