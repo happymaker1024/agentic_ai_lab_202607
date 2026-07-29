@@ -5,6 +5,7 @@ from __future__ import annotations
 from pathlib import Path
 
 
+# 프로젝트 루트와 데이터/출력 폴더를 기준 경로로 한 번에 관리한다.
 PACKAGE_DIR = Path(__file__).resolve().parent
 SRC_DIR = PACKAGE_DIR.parent
 PROJECT_ROOT = SRC_DIR.parent
@@ -20,7 +21,7 @@ CHROMA_DIR = VECTORSTORE_DIR / "chroma"
 
 
 def ensure_output_dirs() -> None:
-    """Notebook이 공통으로 사용하는 출력 폴더를 생성한다."""
+    """실습 실행 중 생성되는 결과물 디렉터리를 미리 준비한다."""
     for directory in (
         OUTPUT_DIR,
         LOG_DIR,

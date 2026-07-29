@@ -19,6 +19,7 @@ CORE_PACKAGES = (
 )
 
 
+# 노트북 환경 확인용 패키지 버전 조회 함수다.
 def package_versions(packages: tuple[str, ...] = CORE_PACKAGES) -> dict[str, str]:
     """설치된 핵심 패키지 버전을 반환한다."""
     versions: dict[str, str] = {}
@@ -30,9 +31,10 @@ def package_versions(packages: tuple[str, ...] = CORE_PACKAGES) -> dict[str, str
     return versions
 
 
+# 학습자에게 필요한 환경 정보를 한눈에 보여주는 헬퍼다.
 def print_environment_summary(
     settings: Settings | None = None,
-    *,
+    *,   # 여기서부터 키워드 전용 인자라는 구분의 의미다.
     needs_chat_model: bool = False,
     needs_embedding_model: bool = False,
 ) -> None:
@@ -74,7 +76,7 @@ def environment_report() -> dict[str, Any]:
 
 
 def show_graph(graph: Any) -> None:
-    """컴파일된 LangGraph를 Jupyter 출력 영역에 표시한다."""
+    """LangGraph의 Mermaid 그래프를 노트북 출력 영역에 표시한다."""
     from IPython.display import Image, display
 
     display(Image(graph.get_graph().draw_mermaid_png()))

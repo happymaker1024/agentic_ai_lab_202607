@@ -7,6 +7,7 @@ from typing import Literal
 from pydantic import BaseModel, ConfigDict, Field
 
 
+# LLM의 응답을 검증하기 위한 스키마로, 구조화된 출력의 기준이 된다.
 class InputAnalysis(BaseModel):
     """사용자 입력을 분석한 결과를 담는 Schema.
 

@@ -5,6 +5,7 @@ from __future__ import annotations
 from .config import get_settings
 
 
+# OpenAI API 키가 필요한 모델 생성 전에 필수 설정을 먼저 확인한다.
 def _require_api_key() -> str:
     settings = get_settings()
     if not settings.openai_api_key:
@@ -17,7 +18,7 @@ def _require_api_key() -> str:
 
 
 def get_chat_model(temperature: float = 0.0):
-    """공통 설정을 사용하는 ChatOpenAI 인스턴스를 반환한다."""
+    """대화형 모델 인스턴스를 생성하는 공장 함수다."""
     from langchain_openai import ChatOpenAI
 
     settings = get_settings()
@@ -35,7 +36,7 @@ def get_chat_model(temperature: float = 0.0):
 
 
 def get_embedding_model():
-    """공통 설정을 사용하는 OpenAIEmbeddings 인스턴스를 반환한다."""
+    """벡터 임베딩 모델 인스턴스를 생성하는 공장 함수다."""
     from langchain_openai import OpenAIEmbeddings
 
     settings = get_settings()

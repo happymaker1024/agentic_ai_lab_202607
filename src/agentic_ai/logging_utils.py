@@ -25,7 +25,7 @@ def print_steps(steps: list[dict[str, Any]]) -> None:
 
 
 def create_run_log(case_id: str, thread_id: str = "thread-000") -> dict[str, Any]:
-    """통합 Agent 실행 로그의 초기 구조를 생성한다."""
+    """에이전트 실행 추적을 위해 공통 로그 스키마를 먼저 구성한다."""
     return {
         "case_id": case_id,
         "thread_id": thread_id,
@@ -42,7 +42,7 @@ def create_run_log(case_id: str, thread_id: str = "thread-000") -> dict[str, Any
 
 
 def save_log(log: dict[str, Any], output_path: str | Path) -> Path:
-    """로그를 JSON 파일로 저장하고 저장 경로를 반환한다."""
+    """로그를 JSON 형식으로 저장해 디버깅과 재현에 사용할 수 있게 한다."""
     path = Path(output_path)
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", encoding="utf-8") as f:

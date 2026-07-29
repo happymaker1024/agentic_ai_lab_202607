@@ -13,11 +13,12 @@ from dotenv import load_dotenv
 
 from .paths import ENV_FILE
 
-# 실습 프로젝트의 .env를 기준으로 모든 Notebook이 같은 설정을 사용한다.
+# 공통 .env 파일을 읽어 노트북과 스크립트가 같은 설정을 사용하도록 맞춘다.
 # OS에 남아 있는 이전 과정의 환경변수가 실습 설정을 덮지 않도록 한다.
 load_dotenv(ENV_FILE, override=True)
 
 
+# 실습에서 자주 쓰는 설정 값을 타입 안정성 있게 묶어 둔 데이터 클래스다.
 @dataclass(frozen=True)
 class Settings:
     openai_api_key: str | None

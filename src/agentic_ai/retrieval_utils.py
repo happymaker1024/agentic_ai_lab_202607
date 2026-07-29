@@ -13,6 +13,7 @@ from .models import get_embedding_model
 from .paths import CHROMA_DIR
 
 
+# Chroma Vector Store를 재사용 가능한 형태로 열고, 없으면 새로 만든다.
 def get_chroma_store(
     collection_name: str,
     *,
@@ -30,6 +31,7 @@ def get_chroma_store(
     )
 
 
+# Collection이 비어 있는 경우에만 문서를 추가해 중복 삽입을 방지한다.
 def add_documents_if_empty(
     vector_store: Chroma,
     documents: Sequence[Document],

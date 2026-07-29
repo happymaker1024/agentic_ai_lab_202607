@@ -23,6 +23,7 @@ _ALLOWED_UNARY_OPS = {
 }
 
 
+# 안전한 수식 평가를 위해 허용된 연산만 처리한다.
 def _eval_node(node: ast.AST) -> int | float:
     if isinstance(node, ast.Constant) and isinstance(node.value, (int, float)):
         return node.value
@@ -74,6 +75,7 @@ def check_required_fields(data: dict[str, Any], required: list[str]) -> list[str
     ]
 
 
+# LLM이 호출할 수 있는 실제 Tool 함수들을 등록해 둔다.
 TOOL_REGISTRY = {
     "calculate": calculate,
     "search_keyword": search_keyword,
