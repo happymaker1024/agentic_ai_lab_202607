@@ -17,15 +17,15 @@
           "args": {
             "expression": "25 + 17"
           },
-          "id": "call_fbEu08mFMLGdnoSRGzuA2XZu",
+          "id": "call_HWU8B9uClWTd1jCyvDOIWUDL",
           "type": "tool_call"
         },
         {
           "name": "search_course_policy_tool",
           "args": {
-            "keyword": "수료"
+            "keyword": "수료 기준"
           },
-          "id": "call_FiN15nT0pW1MYQISgl948gmB",
+          "id": "call_FADSZWkBmUqNtR5e2zj8ZsPp",
           "type": "tool_call"
         }
       ],
@@ -36,19 +36,19 @@
       "type": "ToolMessage",
       "content": "42",
       "tool_calls": [],
-      "tool_call_id": "call_fbEu08mFMLGdnoSRGzuA2XZu",
+      "tool_call_id": "call_HWU8B9uClWTd1jCyvDOIWUDL",
       "name": "calculate_tool"
     },
     {
       "type": "ToolMessage",
-      "content": "수료 기준은 출석률 80% 이상이며, 최종 프로젝트를 ",
+      "content": "수료 기준은 출석률 80% 이상이며, 최종 프로젝트를 제출해",
       "tool_calls": [],
-      "tool_call_id": "call_FiN15nT0pW1MYQISgl948gmB",
+      "tool_call_id": "call_FADSZWkBmUqNtR5e2zj8ZsPp",
       "name": "search_course_policy_tool"
     },
     {
       "type": "AIMessage",
-      "content": "25와 17을 더한 값은 42입니다. 과정의 수료 기준은 출석률 80% 이상이며, 최종 프로젝트를 완료해야 합니다.",
+      "content": "25와 17을 더한 값은 42입니다. 과정의 수료 기준은 출석률 80% 이상이며, 최종 프로젝트를 제출하는 것입니다.",
       "tool_calls": [],
       "tool_call_id": null,
       "name": null
