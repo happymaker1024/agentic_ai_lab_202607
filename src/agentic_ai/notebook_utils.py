@@ -79,4 +79,7 @@ def show_graph(graph: Any) -> None:
     """LangGraph의 Mermaid 그래프를 노트북 출력 영역에 표시한다."""
     from IPython.display import Image, display
 
-    display(Image(graph.get_graph().draw_mermaid_png()))
+    try:
+        display(Image(graph.get_graph().draw_mermaid_png()))
+    except Exception as e:
+        print("show_graph(graph) 실패:", e)
