@@ -24,7 +24,7 @@
       "tool_log": [
         "llm_direct_answer"
       ],
-      "final_answer": "[question] 리모트워크는 유연한 근무 환경과 출퇴근 시간 절약으로 생산성과 워라밸을 향상시킨다."
+      "final_answer": "[question] 리모트워크는 유연한 근무 환경과 출퇴근 시간 절약으로 생산성과 삶의 균형을 향상시킨다."
     },
     {
       "user_input": "문서에서 '온보딩' 찾아줘",
